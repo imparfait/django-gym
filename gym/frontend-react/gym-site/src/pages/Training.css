@@ -1,0 +1,29 @@
+.schedule-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #bba007;
+    color: white;
+  }
+  
+  .training {
+    display: block;
+    background-color: #bba007;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  

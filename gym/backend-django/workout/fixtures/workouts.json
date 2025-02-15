@@ -1,0 +1,102 @@
+[
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Yoga Flow",
+            "start_time": "08:00:00",
+            "end_time": "09:00:00",
+            "instructor": "Emily Johnson",
+            "day_of_week": "Monday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "HIIT Training",
+            "start_time": "12:00:00",
+            "end_time": "13:00:00",
+            "instructor": "Michael Brown",
+            "day_of_week": "Monday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Strength & Conditioning",
+            "start_time": "18:00:00",
+            "end_time": "19:00:00",
+            "instructor": "David Martinez",
+            "day_of_week": "Monday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Pilates",
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "instructor": "Anna Smith",
+            "day_of_week": "Tuesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Zumba",
+            "start_time": "09:00:00",
+            "end_time": "10:00:00",
+            "instructor": "Sophia Lee",
+            "day_of_week": "Tuesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Pilates",
+            "start_time": "12:00:00",
+            "end_time": "13:00:00",
+            "instructor": "Olivia Williams",
+            "day_of_week": "Tuesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Boxing Training",
+            "start_time": "17:00:00",
+            "end_time": "18:00:00",
+            "instructor": "James Anderson",
+            "day_of_week": "Tuesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Morning Yoga",
+            "start_time": "10:00:00",
+            "end_time": "11:00:00",
+            "instructor": "Isabella Davis",
+            "day_of_week": "Wednesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Cardio Kickboxing",
+            "start_time": "08:00:00",
+            "end_time": "09:00:00",
+            "instructor": "William Scott",
+            "day_of_week": "Wednesday"
+        }
+    },
+    {
+        "model": "workout.WorkoutClass",
+        "fields": {
+            "name": "Sunrise Yoga",
+            "start_time": "08:00:00",
+            "end_time": "09:00:00",
+            "instructor": "Charlotte Green",
+            "day_of_week": "Friday"
+        }
+    }
+]
