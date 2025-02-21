@@ -3,24 +3,44 @@ import axios from "axios";
 import "./Training.css"; 
 
 const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const timeSlots = ["07:00", "08:00", "09:00", "10:00", "11:00",  "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
+const timeSlots = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
 
 function Training() {
   const [trainings, setTrainings] = useState([]);
+  const [search, setSearch] = useState("");  
 
   useEffect(() => {
-    axios.get("http://localhost:8000/workout/classes/")
-      .then(response => {
-        setTrainings(response.data);
-      })
-      .catch(error => {
-        console.error("Error fetching training data:", error);
-      });
-  }, []);
+    fetchTrainings();
+  }, [search]);  
+
+  const fetchTrainings = () => {
+    axios.get("http://localhost:8000/workout/classes/", {
+      params: { search }
+    })
+    .then(response => {
+      if (response.data.length === 0) {
+        alert("No trainings found for your search.");
+      }
+      setTrainings(response.data);
+    })
+    .catch(error => {
+      console.error("Error fetching training data:", error);
+    });
+  };
 
   return (
     <div className="schedule-container">
       <h1>TRAINING SCHEDULE</h1>
+
+      <div className="filters">
+        <input 
+          type="text" 
+          placeholder="Search by name or instructor..." 
+          value={search} 
+          onChange={(e) => setSearch(e.target.value)} 
+        />
+      </div>
+
       <table className="schedule-table">
         <thead>
           <tr>
