@@ -31,6 +31,23 @@ body {
   padding: 1rem 0;
   z-index: 1000;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-links {
+  margin-left: auto; 
+  display: flex;
+  gap: 10px;
+}
 
 .navbar a {
   color: #f9d822;  
@@ -92,7 +109,6 @@ body {
   padding: 20px;
 }
 
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -120,6 +136,74 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #218838;
+}
+
+.error {
+  color: red;
+}
+
+.username {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background:none;
+  border:none;
+  color: #f9d822;  
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0px;
+}
+.logout-btn:hover{
+  color:#646cff;
+  cursor: pointer;
+  border: none;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
