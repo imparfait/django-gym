@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { logout, getCurrentUser } from "../services/authService";
+//import { useState, useEffect } from "react";
+import { logout } from "../services/authService";
 
 function Header({ user, setUser }) {
   return (
@@ -9,6 +9,7 @@ function Header({ user, setUser }) {
       <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/training">Training</Link>
+          <Link to="/subscriptions">Subscriptions</Link>
         </div>
         <div className="auth-links">
           {user ? (

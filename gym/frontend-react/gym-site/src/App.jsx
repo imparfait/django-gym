@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import { getCurrentUser, logout } from "./services/authService";
 import React, { useState, useEffect } from "react";
+import SubscriptionsPage from "./pages/Subscriptions";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/subscriptions" element={<SubscriptionsPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login setUser={setUser}/>} />
       </Routes>
