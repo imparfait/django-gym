@@ -14,7 +14,8 @@ function App() {
   }, []);
   return (
     <>
-      <Header user={user} setUser={setUser} />
+      {/* <Header user={user} setUser={setUser} /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/training" element={<Training />} />

@@ -1,0 +1,150 @@
+.hero__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.hero__content .section__title{
+    font-size: 3rem;
+    padding-right: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.highlights{
+    color: var(--primary-color);
+}
+
+.hero__content p{
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.box-01{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    border: 25px solid var(--primary-color);
+}
+
+.box-02{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    border: 25px solid #b5a9f3;
+}
+
+.box-03{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 25px solid #d3cef2;
+}
+
+.hero__img-wrapper{
+    position: relative;
+    z-index: 1;
+}
+
+.box-img{
+    position: absolute;
+    top: -7%;
+    left: -13%;
+    z-index: 10;
+}
+
+.box-img img {
+    width: 123%
+
+}
+
+.heart__rate{
+    position: absolute;
+    top: 55%;
+    left: -11%;
+    z-index: 10;
+    box-shadow: -3px 3px 8px #d3cef2;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 10px;
+
+}
+
+.heart__rate span{
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d7337a;
+    background: #d3cef2;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.heart__rate h5{
+    font-size: 0.8rem;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.gym__location{
+    position: absolute;
+    top: -2%;
+    right: -17%;
+    z-index: 10;
+    box-shadow: 3px -3px 8px #d3cef2;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.2rem;
+
+}
+
+.gym__location span{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 5px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.gym__location h5{
+    font-size: 0.8rem;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dumble-icon{
+    position: absolute;
+    top: -2%;
+    left: -5%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #d7337a;
+    color: white;
+    border-radius: 5px;
+}
+
+.dumble-icon img{
+    width: 60%;
+}

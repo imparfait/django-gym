@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -63,7 +63,6 @@ body {
   font-size: 8vw;
   text-transform: uppercase;
   color: white;
-  /* color: #d8b909; */
   margin: 0;
 }
 
@@ -141,7 +140,7 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background: url('./assets/gym.webp') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -171,7 +170,7 @@ button:focus-visible {
   width: 100%;
   padding: 10px;
   margin: 10px 0px;
-  background: #28a745;
+  background: #d8b909;
   color: white;
   border: none;
   border-radius: 5px;
@@ -229,4 +228,66 @@ button:focus-visible {
     max-width: 100%; 
     text-align: center;
   }
+} */
+
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
+  --primary-color: #6f55f2;
+  --heading-color: #132742;
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgba(103, 101, 240, 1) 27%,
+    rgba(141, 141, 235, 1) 85%
+  );
+  --font-name: "Questrial", sans-serif;
+
+  /* 
+        #9785f2
+        #b5a9f3
+        #d3cef2
+        #d7337a
+    */
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: var(--font-name);
+}
+
+section {
+  padding: 50px 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.section__title {
+  font-weight: 700;
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 50px;
 }
