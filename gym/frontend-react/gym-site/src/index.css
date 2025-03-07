@@ -1,232 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --primary-color: #6f55f2;
+  --heading-color: #132742;
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgba(103, 101, 240, 1) 27%,
+    rgba(141, 141, 235, 1) 85%
+  );
+  --font-name: "Questrial", sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000; 
+  /* 
+        #9785f2
+        #b5a9f3
+        #d3cef2
+        #d7337a
+    */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: var(--font-name);
+}
+
+section {
+  padding: 50px 0;
 }
 
 a {
-  text-decoration: inherit;
+  text-decoration: none;
+  color: unset;
 }
 
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+a:hover {
+  color: unset;
 }
 
-.header {
-  position: fixed;  
-  top: 0;
-  width: 100%;
-  padding: 1rem 0;
-  z-index: 1000;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+ul {
+  list-style: none;
 }
 
-.nav-links {
-  display: flex;
-  gap: 15px;
+.container {
+  width: 1140px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-.auth-links {
-  margin-left: auto; 
-  display: flex;
-  gap: 10px;
-}
-
-.navbar a {
-  color: #f9d822;  
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0 15px;
-}
-
-.gym-title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  text-align: start;
-  font-size: 8vw;
-  text-transform: uppercase;
-  color: white;
-  /* color: #d8b909; */
-  margin: 0;
-}
-
-.subtext {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  color: #f9d822;
-  text-align: start;
-  margin-left: 40px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3vw;
-  text-transform: uppercase;
-}
-
-.address {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.working-hours {
-  background: rgba(206, 170, 42, 0.6); 
-  padding: 15px 30px;
-  border-radius: 10px;
-  display: inline-block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: start;
-  width: 250px;
-  margin: 40px;
-}
-
-.home-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh; 
+.section__title {
+  font-weight: 700;
+  color: var(--heading-color);
   text-align: center;
-  background-image: url('./assets/gym1.webp'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  padding: 20px;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-.training-page{
-  background-color: black;
-  color: white;
-  margin: 60px;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.auth-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: url('./assets/background.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.auth-container {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.auth-container h2 {
-  margin-bottom: 20px;
-}
-
-.auth-container input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 10px 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.auth-container button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.auth-container button:hover {
-  background: #218838;
-}
-
-.error {
-  color: red;
-}
-
-.username {
-  margin-left: 15px;
-  font-weight: bold;
-}
-
-.logout-btn {
-  background:none;
-  border:none;
-  color: #f9d822;  
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0px;
-}
-.logout-btn:hover{
-  color:#646cff;
-  cursor: pointer;
-  border: none;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column; 
-  }
-
-  .left-content,
-  .right-content {
-    max-width: 100%; 
-    text-align: center;
-  }
+  margin-bottom: 50px;
 }

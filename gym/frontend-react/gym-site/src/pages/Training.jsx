@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./Training.css"; 
 
@@ -8,13 +9,31 @@ const timeSlots = ["07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00"
 function Training() {
   const [trainings, setTrainings] = useState([]);
   const [search, setSearch] = useState("");  
+  const navigate = useNavigate(); // function to navigate to another page
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login"); // redirect to login page if not logged in
+      return;
+    }
+
     fetchTrainings();
-  }, [search]);  
+  }, [search, navigate]);
 
   const fetchTrainings = () => {
+    const token = localStorage.getItem("token");
+    
+    if (!token) {
+      alert("You need to be logged in to see trainings.");
+      return;
+    }
+  
     axios.get("http://localhost:8000/workout/classes/", {
+      headers: {
+        Authorization: `Bearer ${token}`, 
+      },
       params: { search }
     })
     .then(response => {
@@ -27,6 +46,7 @@ function Training() {
       console.error("Error fetching training data:", error);
     });
   };
+
 
   return (
     <div className="schedule-container">
@@ -65,7 +85,7 @@ function Training() {
           ))}
         </tbody>
       </table>
-    </div>
+    </div> 
   );
 }
 
