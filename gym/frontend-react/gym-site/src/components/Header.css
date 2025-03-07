@@ -35,53 +35,48 @@
 }
 
 .logo h2 {
-    color: var(--heading-color);
-    font-weight: 700 !important;
-    font-size: 1.8rem;
+  color: var(--heading-color);
+  font-weight: 700 !important;
+  font-size: 1.8rem;
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    column-gap: 2.7rem;
+  display: flex;
+  align-items: center;
+  column-gap: 2.7rem;
 }
 
 .nav__item a {
-    color: var(--heading-color);
-    font-weight: 600 !important;
-    cursor: pointer;
-    transition: color 0.3s;
-    font-size: 1.1rem;
+  color: var(--heading-color);
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.1rem;
 }
 
 .nav__item a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .nav__right {
-    display: flex;
-    align-items: center;
-    column-gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
 }
 
 .register__btn {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  outline: none;
+  color: var(--primary-color);
   border-radius: 5px;
   cursor: pointer;
   font-family: var(--font-name);
   font-size: 1rem;
   font-weight: 700;
-}   
+  transition: font-size 0.3s;
+}
 
-.mobile__menu {
-    color: var(--heading-color);
-    font-size: 1.3rem;
-    cursor: pointer;
-    display: none;
+.register__btn:hover {
+  color: var(--primary-color);
+  font-size: 1.1rem;
 }
 
 .sticky__header {

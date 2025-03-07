@@ -50,7 +50,7 @@ function Pricing() {
                                 </li>
                             </ul>
 
-                            <button className="register__btn">Join Now</button>
+                            <button className="join__btn">Join Now</button>
 
                         </div>
                     </div>
@@ -93,7 +93,7 @@ function Pricing() {
                                 </li>
                             </ul>
 
-                            <button className="register__btn">Join Now</button>
+                            <button className="join__btn">Join Now</button>
 
                         </div>
                     </div>
@@ -136,7 +136,7 @@ function Pricing() {
                                 </li>
                             </ul>
 
-                            <button className="register__btn">Join Now</button>
+                            <button className="join__btn">Join Now</button>
 
                         </div>
                     </div>

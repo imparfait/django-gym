@@ -1,45 +1,14 @@
-// import { Link } from "react-router-dom";
-// import { useState, useEffect } from "react";
-// import { logout, getCurrentUser } from "../services/authService";
-
-// function Header({ user, setUser }) {
-//   return (
-//     <header className="header">
-//       <nav className="navbar">
-//       <div className="nav-links">
-//           <Link to="/">Home</Link>
-//           <Link to="/training">Training</Link>
-//         </div>
-//         <div className="auth-links">
-//           {user ? (
-//             <>
-//               <button className="logout-btn" onClick={() => { logout(setUser) }}>
-//                 Logout
-//               </button>
-//             </>
-//           ) : (
-//             <>
-//               <Link to="/login">Login</Link>
-//               <Link to="/register">Register</Link>
-//             </>
-//           )}
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// }
-
-// export default Header;
-
 import "./Header.css";
 import logo from "../assets/dumble.png";
 import { useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { logout } from "../services/authService";
 
 const nav__links = [
   { path: "/", display: "Home", isRoute: true },
-  { path: "#pricing-plan", display: "Pricing", isRoute: true },
+  { path: "#pricing-plan", display: "Pricing", isRoute: false },
   { path: "/training", display: "Training", isRoute: true },
+  { path: "/admin-workout", display: "Admin Workout", isRoute: true },
 ];
 
 function Header({ user, setUser }) {
@@ -85,13 +54,18 @@ function Header({ user, setUser }) {
             </ul>
           </nav>
 
-          {/* nav right */}
+          {/* auth section */}
           <div className="nav__right">
-            <button className="register__btn">Log In</button>
-            <button className="register__btn">Register</button>
-            <span className="mobile__menu">
-              <i className="ri-menu-line"></i> 
-            </span>
+            {user ? (
+              <button className="join__btn" onClick={() => logout(setUser)}>
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link to="/login" className="register__btn">Login</Link>
+                <Link to="/register" className="register__btn">Register</Link>
+              </>
+            )}
           </div>
 
         </div>

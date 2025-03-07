@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { login } from '../services/authService';
-import "../index.css";
+import "./Login.css";
 
 const Login = ({ setUser }) => {
     const [username, setUsername] = useState('');
@@ -14,9 +14,20 @@ const Login = ({ setUser }) => {
         setError('');
         try {
             const response = await login(username, password, setUser);
-            if (response.access) {
+            if (response && response.access) {
+                localStorage.setItem("token", response.access);
+                localStorage.setItem("refreshToken", response.refresh);
+            
+                const isAdmin = response.data?.userProfile?.is_admin;
+            
+                localStorage.setItem("isAdmin", isAdmin);
+            
+                console.log("Login successful!");
+                console.log("User is admin:", isAdmin);
+            
                 navigate("/");
-            } else {
+            }
+             else {
                 setError("Invalid credentials");
             }
         } catch (error) {
@@ -34,6 +45,7 @@ const Login = ({ setUser }) => {
                     <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <button type="submit">Login</button>
+                    <p>Don't have an account? <Link to="/register" className="register__btn">Register now</Link></p>
                 </form>
             </div>
         </div>

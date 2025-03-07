@@ -16,7 +16,7 @@ function Home() {
                         <div className="hero__content">
                             <h2 className="section__title"> Exercise is the key to a <span className="highlights">Healthy</span> Lifestyle </h2>
                             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Consequatur dignissimos, ea voluptatem excepturi voluptatum itaque! </p>
-                            <button className="register__btn">Get Started</button>
+                            <button className="join__btn">Get Started</button>
 
                         </div>
 

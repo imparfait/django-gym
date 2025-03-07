@@ -1,10 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # WorkoutClass model created to store the workout class details
 class WorkoutClass(models.Model):
     name = models.CharField(max_length=100)
-    start_time = models.TimeField()  
-    end_time = models.TimeField()  
+    start_time = models.TimeField()   
     instructor = models.CharField(max_length=100)
 
     # First - database value, second - human-readable value
@@ -20,3 +20,10 @@ class WorkoutClass(models.Model):
 
     def __str__(self):
         return self.name
+    
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    is_admin = models.BooleanField(default=False)  
+
+    def __str__(self):
+        return self.user.username
